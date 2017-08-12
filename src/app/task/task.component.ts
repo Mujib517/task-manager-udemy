@@ -9,7 +9,7 @@ import * as moment from 'moment';
     <div>{{task.category}}</div>
     <div>{{task.created | date: 'MM-dd-yyyy'}}</div>
     <hr/>
-    <div>{{getElapsedTime()}}</div>
+    <div>{{task.created | time}}</div>
     Completed? <input type="checkbox" [(ngModel)]="task.completed"/>
   </div>
   `
@@ -18,9 +18,4 @@ import * as moment from 'moment';
 export class TaskComponent {
 
   @Input() task: any;
-
-  getElapsedTime() {
-    return moment(this.task.created).fromNow();
-  }
-
 }
