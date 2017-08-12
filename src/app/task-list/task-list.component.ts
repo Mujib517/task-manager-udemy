@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { TaskService } from "app/shared/task.service";
 
 @Component({
   selector: 'app-task-list',
@@ -14,13 +14,10 @@ import { Http } from '@angular/http';
 })
 export class TaskListComponent {
 
-  constructor(private http: Http) {
-
-    http.get('http://localhost:3000/tasks')
-      .subscribe((response) => this.tasks = response.json());
-  }
-
   tasks: any;
 
-
+  constructor(private taskSvc: TaskService) {
+    taskSvc.get()
+      .subscribe((response) => this.tasks = response.json());
+  }
 }

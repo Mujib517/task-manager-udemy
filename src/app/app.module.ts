@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { FormsModule } from '@angular/forms';
 import { TaskListComponent } from './task-list/task-list.component';
+import { TaskService } from "app/shared/task.service";
 
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule],
     declarations: [AppComponent, TaskComponent, TaskListComponent],
+    providers: [TaskService],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
