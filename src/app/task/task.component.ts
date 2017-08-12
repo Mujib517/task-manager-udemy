@@ -4,9 +4,9 @@ import { Component, OnInit, Input } from '@angular/core';
   selector: 'app-task',
   template: `
   <div>
-    <h3>{{task.name}}</h3>
+    <h3>{{task.name | uppercase}}</h3>
     <div>{{task.category}}</div>
-    <div>{{task.created}}</div>
+    <div>{{task.created | date: 'MM-dd-yyyy'}}</div>
     Completed? <input type="checkbox" [(ngModel)]="task.completed"/>
   </div>
   `
