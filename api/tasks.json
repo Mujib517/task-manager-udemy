@@ -1,7 +1,22 @@
 {
     "tasks": [
-        {"name":"Buy Groceries"},
-        {"name":"Recharge"},
-        {"name":"Pay Bill"}
+        {
+            "name": "Buy Groceries",
+            "category": "general",
+            "completed": true,
+            "created": "08-12-2017"
+        },
+        {
+            "name": "Recharge",
+            "category": "general",
+            "completed": false,
+            "created": "08-12-2017"
+        },
+        {
+            "name": "Pay Bill",
+            "category": "general",
+            "completed": false,
+            "created": "08-12-2017"
+        }
     ]
 }

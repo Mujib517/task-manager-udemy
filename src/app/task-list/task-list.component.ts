@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-task-list',
@@ -13,15 +14,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskListComponent {
 
-  tasks: any = [{
-    name:'Buy Groceries'
-  },
-  {
-    name:'Recharge Mobile'
-  },
-  {
-    name:'Pay internet bill'
-  }];
+  constructor(private http: Http) {
+
+    http.get('http://localhost:3000/tasks')
+      .subscribe((response) => this.tasks = response.json());
+  }
+
+  tasks: any;
 
 
 }
