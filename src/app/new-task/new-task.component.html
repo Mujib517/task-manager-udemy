@@ -2,11 +2,11 @@
   <h3>Add New Task</h3>
 
   <div class="form-group">
-    <input type="text" class="form-control" placeholder="Name" />
+    <input type="text" class="form-control" placeholder="Name" [(ngModel)]="task.name" />
   </div>
 
   <div class="form-group">
-    <select>
+    <select [(ngModel)]="task.category" >
       <optgroup>
         <option>General</option>
         <option>Shopping</option>
@@ -15,10 +15,10 @@
   </div>
 
   <div class="form-group">
-    Completed? <input type="checkbox" />
+    Completed? <input type="checkbox" [(ngModel)]="task.completed"  />
   </div>
 
   <div class="form-group">
-    <button class="btn btn-primary">Save Task</button>
+    <button class="btn btn-primary" (click)="onSave()">Save Task</button>
   </div>
 </div>

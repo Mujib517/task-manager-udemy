@@ -1,22 +1,39 @@
 {
-    "tasks": [
-        {
-            "name": "Buy Groceries",
-            "category": "general",
-            "completed": true,
-            "created": "08-12-2017"
-        },
-        {
-            "name": "Recharge",
-            "category": "general",
-            "completed": false,
-            "created": "08-12-2017"
-        },
-        {
-            "name": "Pay Bill",
-            "category": "general",
-            "completed": false,
-            "created": "08-12-2017"
-        }
-    ]
+  "tasks": [
+    {
+      "name": "Buy Groceries",
+      "category": "general",
+      "completed": true,
+      "created": "08-12-2017"
+    },
+    {
+      "name": "Recharge",
+      "category": "general",
+      "completed": false,
+      "created": "08-12-2017"
+    },
+    {
+      "name": "Pay Bill",
+      "category": "general",
+      "completed": false,
+      "created": "08-12-2017"
+    },
+    {
+      "id": 25,
+      "name": "My New Task",
+      "category": "Shopping",
+      "completed": true
+    },
+    {
+      "id": 27,
+      "name": "My Second Task",
+      "category": "Shopping"
+    },
+    {
+      "id": 57,
+      "name": "My Another new Task",
+      "category": "Shopping",
+      "completed": true
+    }
+  ]
 }
