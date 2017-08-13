@@ -13,17 +13,19 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'tasks', component: TaskListComponent },
+    { path: 'tasks/new', component: NewTaskComponent },
     { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
     imports: [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(routes)],
-    declarations: [AppComponent, TaskComponent, TaskListComponent, Time, HomeComponent, AboutComponent, FooterComponent, HeaderComponent],
+    declarations: [AppComponent, TaskComponent, TaskListComponent, Time, HomeComponent, AboutComponent, FooterComponent, HeaderComponent, NewTaskComponent],
     providers: [TaskService],
     bootstrap: [AppComponent]
 })

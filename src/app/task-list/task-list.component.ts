@@ -5,6 +5,7 @@ import { Task } from "app/shared/task.model";
 @Component({
   selector: 'app-task-list',
   template: `
+  <a routerLink="new" class="btn btn-danger">Add new task</a>
    <div class="col-md-3">
       <div class="well" *ngFor="let task of tasks">
           <app-task [task]="task"></app-task>
